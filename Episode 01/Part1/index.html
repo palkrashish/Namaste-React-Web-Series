@@ -7,9 +7,16 @@
     <title>Namaste ReactJS</title>
 </head>
 <body>
-    <div class="root">
+    <!-- <div class="root">
         <h1>Hello World</h1>
-    </div>
-    
+    </div> -->
+     <!-- Now we are going same print using JS -->
+     <div id="root"></div>
+     <script>
+        const heading = document.createElement('h1');
+        heading.innerHTML = 'Hello , We are coming from JS'
+        const root = document.getElementById('root');
+        root.appendChild(heading);
+     </script>
 </body>
 </html>
