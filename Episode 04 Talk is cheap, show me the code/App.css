@@ -24,12 +24,30 @@
 .search{
     padding: 5px;
     margin: 10px;
+ 
 }
+input{
+    width: 20%;
+    height: 25px;
+}
+button{
+    background-color: gray;
+    font-size: 20px;
+    margin-left: 10px;
+}
+button:hover{
+    cursor: pointer;
+    color: white;
+    
+}
+
 .res-card{
-    width: 300px;
-    height: 400px;
+    width: 305px;
+    height: 390px;
     border-radius: 5%;
     background-color: #f0f0f0;
+    padding: 2%;
+    margin: 1%;
 }
 .res-card:hover{
     border: 1px solid black;
