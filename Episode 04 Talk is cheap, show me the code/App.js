@@ -47,8 +47,8 @@ const Header = () => {
     </div>
   );
 };
-
-const RestaurentCard = (props) => {
+// const RestaurentCard(props) or
+const RestaurentCard = ({ resName, cuisine, rating, timeToDelvery }) => {
   return (
     <div className="res-card">
       <img
@@ -56,10 +56,10 @@ const RestaurentCard = (props) => {
         src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_628,h_704/TopPicks/CdbryCrack"
         alt="logo"
       />
-      <h3>{props.resName}</h3>
-      <h4>{props.cuisine}</h4>
-      <h5>{props.rating}</h5>
-      <h6>{props.timeToDelvery}</h6>
+      <h3>{resName}</h3>
+      <h4>{cuisine}</h4>
+      <h5>{rating}</h5>
+      <h6>{timeToDelvery}</h6>
     </div>
   );
 };
@@ -75,14 +75,12 @@ const Body = () => {
           rating="4.9"
           timeToDelvery="30 Minutes"
         />
-        <RestaurentCard 
-        resName="KFC" 
-        cuisine="Burger, Aalo Tikki"
-        rating= "4.4"
-        timeToDelvery= "15 Minutes"
+        <RestaurentCard
+          resName="KFC"
+          cuisine="Burger, Aalo Tikki"
+          rating="4.4"
+          timeToDelvery="15 Minutes"
         />
-        <RestaurentCard />
-        <RestaurentCard />
       </div>
     </div>
   );
