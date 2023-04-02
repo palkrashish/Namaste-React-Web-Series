@@ -48,37 +48,44 @@ const Header = () => {
   );
 };
 
-const RestaurentCard = () =>{
-    return(
-        <div className="res-card">
-        <img 
+const RestaurentCard = (props) => {
+  return (
+    <div className="res-card">
+      <img
         className="res-logo"
-        src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_628,h_704/TopPicks/CdbryCrack" alt="logo" 
-        
-        />
-        <h3>Meghana Foods</h3>
-        <h4>Biryani, North Indaian, South Food</h4>
-        <h5>4.9</h5>
-        <h6>45 Minutes</h6>
-
-
-        </div>
-    )
-}
+        src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_628,h_704/TopPicks/CdbryCrack"
+        alt="logo"
+      />
+      <h3>{props.resName}</h3>
+      <h4>{props.cuisine}</h4>
+      <h5>{props.rating}</h5>
+      <h6>{props.timeToDelvery}</h6>
+    </div>
+  );
+};
 
 const Body = () => {
-  return(
+  return (
     <div className="body">
-    <div className="search">Search</div>
-    <div className="res-container">
-    <RestaurentCard/>
-    <RestaurentCard/>
-    <RestaurentCard/>
-    <RestaurentCard/>
-    
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurentCard
+          resName="Meghana Foods"
+          cuisine="Biryani, North Indaian, South Food"
+          rating="4.9"
+          timeToDelvery="30 Minutes"
+        />
+        <RestaurentCard 
+        resName="KFC" 
+        cuisine="Burger, Aalo Tikki"
+        rating= "4.4"
+        timeToDelvery= "15 Minutes"
+        />
+        <RestaurentCard />
+        <RestaurentCard />
+      </div>
     </div>
-  </div>
-  )
+  );
 };
 
 const AppLayout = () => {
