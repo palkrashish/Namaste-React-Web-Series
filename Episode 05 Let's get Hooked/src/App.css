@@ -26,20 +26,11 @@
     margin: 10px;
  
 }
-input{
-    width: 20%;
-    height: 25px;
-}
-button{
-    background-color: gray;
-    font-size: 20px;
-    margin-left: 10px;
-}
-button:hover{
+.filter-btn{
+    margin: 1%;
     cursor: pointer;
-    color: white;
-    
 }
+
 
 .res-card{
     width: 305px;
