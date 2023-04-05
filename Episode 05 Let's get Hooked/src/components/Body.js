@@ -4,72 +4,7 @@ import { useState } from 'react';
 
 const Body = () => {
 
-  const [listOfRestaurants ,setlistOfRestaurants] = useState([ {
-    data: {
-      data: {
-        id: "21101",
-        name: "MCD",
-        totalRatingsString: "10000+ ratings",
-        cloudinaryImageId: "bobgejyxxdyhmzlcuvfj",
-        cuisines: [
-          "Mughlai",
-          "North Indian",
-          "Chinese",
-          "Biryani",
-          "Kebabs",
-          "Snacks",
-          "American",
-        ],
-        costForTwo: 30000,
-        costForTwoString: "₹300 FOR TWO",
-        avgRating: "3.8",
-      },
-    },
-  },
-  {
-    data: {
-      data: {
-        id: "21102",
-        name: "KFC",
-        totalRatingsString: "10000+ ratings",
-        cloudinaryImageId: "bobgejyxxdyhmzlcuvfj",
-        cuisines: [
-          "Mughlai",
-          "North Indian",
-          "Chinese",
-          "Biryani",
-          "Kebabs",
-          "Snacks",
-          "American",
-        ],
-        costForTwo: 30000,
-        costForTwoString: "₹300 FOR TWO",
-        avgRating: "4.1",
-      },
-    },
-  },
-  {
-    data: {
-      data: {
-        id: "21103",
-        name: "Jagat",
-        totalRatingsString: "10000+ ratings",
-        cloudinaryImageId: "bobgejyxxdyhmzlcuvfj",
-        cuisines: [
-          "Mughlai",
-          "North Indian",
-          "Chinese",
-          "Biryani",
-          "Kebabs",
-          "Snacks",
-          "American",
-        ],
-        costForTwo: 30000,
-        costForTwoString: "₹300 FOR TWO",
-        avgRating: "4.2",
-      },
-    },
-  },])
+  const [listOfRestaurants ,setlistOfRestaurants] = useState(resList)
   
   return (
     <div className="body">
