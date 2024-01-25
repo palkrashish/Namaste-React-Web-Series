@@ -1,14 +1,25 @@
 import RestaurentCard from "./RestaurentCard";
 import resList from "../utilis/mockData";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const Body = () => {
+  const [listOfRestaurants, setlistOfRestaurants] = useState(resList);
+  useEffect(() => {
+    console.log("useEffect Called");
+    fetch();
+  }, []);
+  // console.log('Body part rendered')
 
-  const [listOfRestaurants ,setlistOfRestaurants] = useState(resList)
-  useEffect(()=>{
-    console.log('useEffect Called')
-  },[]);
-  
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+      const json = await data.json()
+      // Optional Chanining 
+      // setlistOfRestaurants(json?)
+      console.log(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants)
+
+  };
   return (
     <div className="body">
       <div className="filter">
@@ -18,9 +29,9 @@ const Body = () => {
             const filterList = listOfRestaurants.filter(
               (res) => res.data.data.avgRating > 4
             );
-            // in console we can change 
+            // in console we can change
             // console.log(listOfRestaurants)
-            setlistOfRestaurants(filterList)
+            setlistOfRestaurants(filterList);
           }}
         >
           Top Rated Restaurent
