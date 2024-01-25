@@ -1,0 +1,56 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 24px;
+}
+.Logo{
+    width: 70px;
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    border: 2px solid black;
+}
+.nav-items > ul{
+    display: flex;
+    font-size: 20px;
+    
+}
+.nav-items > ul >li{
+    padding: 10px;
+    list-style-type: none;    
+}
+.search{
+    padding: 5px;
+    margin: 10px;
+ 
+}
+.filter-btn{
+    margin: 1%;
+    cursor: pointer;
+}
+
+
+.res-card{
+    width: 305px;
+    height: 390px;
+    border-radius: 5%;
+    background-color: #f0f0f0;
+    padding: 2%;
+    margin: 1%;
+}
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.res-logo{
+    width: 190px;
+    padding: 5px;
+}
+.res-container{
+    display: flex;
+  flex-wrap: wrap;
+  margin: 2%;
+  gap: 2%;
+}
