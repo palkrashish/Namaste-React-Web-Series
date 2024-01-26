@@ -6,7 +6,7 @@ const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = useState(resList);
   useEffect(() => {
     console.log("useEffect Called");
-    fetch();
+    fetchData();
   }, []);
   // console.log('Body part rendered')
 
@@ -16,8 +16,7 @@ const Body = () => {
     );
       const json = await data.json()
       // Optional Chanining 
-      // setlistOfRestaurants(json?)
-      console.log(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants)
+      // console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
   };
   return (
